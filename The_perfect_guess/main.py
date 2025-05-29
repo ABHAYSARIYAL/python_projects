@@ -15,4 +15,4 @@ while(p!=k):
         guess +=1
 
 
-print(f"you guessed it right : {k} in {guess} guesses")
+print(f"you guessed the number : {k} correct in {guess} guesses")
