@@ -8,5 +8,10 @@
         "name": "abhay",
         "age": "22",
         "course": "mca"
+    },
+    "2305010": {
+        "name": "anuj nainwal",
+        "age": "23",
+        "course": "mca"
     }
 }
