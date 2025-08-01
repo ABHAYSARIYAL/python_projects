@@ -38,3 +38,32 @@ else:
         print("you lose")
     else:
         print("something went wrong")
+
+
+
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/your-username/jenkins-docker-web.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t my-web-app .'
+            }
+        }
+
+        stage('Run Docker Container') {
+            steps {
+                sh 'docker run -d -p 8080:80 --name my-web-container my-web-app || true'
+            }
+        }
+    }
+}
+
